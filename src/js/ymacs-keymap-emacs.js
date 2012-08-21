@@ -211,6 +211,11 @@ DEFINE_SINGLETON("Ymacs_Keymap_Emacs", Ymacs_Keymap, function(D, P){
                 "M-ARROW_UP"                              : [ "windmove", "up" ],
                 "M-ARROW_DOWN"                            : [ "windmove", "down" ],
 
+                // help
+                "C-h": function() {
+                        var homepage = "http://www.ymacs.org/userdocs.html";
+                        window.open(homepage, "ymacs_userdocs");
+                },
                 // others
                 "C-x =": function() {
                         var ch = this.charAt(), chname = ch;
